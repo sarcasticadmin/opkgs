@@ -14,7 +14,8 @@ PKG_RELEASE:=2
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/Jajcus/apinger
-PKG_MIRROR_HASH:=4ada1330fc5d0adc0216d141f5e3b494df7a4c6500bbffce1efeab3d58684f7e
+PKG_MIRROR_HASH:=9c1ce6f05915fd3225de805f1e84e6343a1e4b0845c23248eb35e9d17b44770b
+
 
 PKG_MAINTAINER:=Alex Samorukov <samm@os2.kiev.ua>
 PKG_LICENSE:=GPL-2.0-only
