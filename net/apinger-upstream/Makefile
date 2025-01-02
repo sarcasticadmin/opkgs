@@ -27,14 +27,14 @@ PKG_BUILD_PARALLEL:=0
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/apinger
+define Package/apinger-upstream
   SECTION:=net
   CATEGORY:=Network
   TITLE:=Tool which monitors various IP devices by simple ICMP echo requests
   URL:=https://github.com/Jajcus/apinger
 endef
 
-define Package/apinger/description
+define Package/aping-upstream/description
 	Alarm Pinger (apinger) is a little tool which monitors various IP devices by
 	simple ICMP echo requests. There are various other tools, that can do this,
 	but most of them are shell or perl scripts, spawning many processes, thus much
@@ -45,11 +45,11 @@ define Package/apinger/description
 	on Linux and FreeBSD.
 endef
 
-define Package/apinger/conffiles
+define Package/aping-upstream/conffiles
 /etc/apinger.conf
 endef
 
-define Package/apinger/install
+define Package/aping-upstream/install
 	$(INSTALL_DIR) $(1)/usr/sbin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/sbin/apinger $(1)/usr/sbin/
 	$(INSTALL_DIR) $(1)/etc
@@ -58,5 +58,5 @@ define Package/apinger/install
 	$(INSTALL_BIN) ./files/apinger.init $(1)/etc/init.d/apinger
 endef
 
-$(eval $(call BuildPackage,apinger))
+$(eval $(call BuildPackage,apinger-upstream))
 
