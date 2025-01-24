@@ -35,7 +35,7 @@ define Package/apinger-upstream
   URL:=https://github.com/Jajcus/apinger
 endef
 
-define Package/aping-upstream/description
+define Package/apinger-upstream/description
 	Alarm Pinger (apinger) is a little tool which monitors various IP devices by
 	simple ICMP echo requests. There are various other tools, that can do this,
 	but most of them are shell or perl scripts, spawning many processes, thus much
@@ -46,11 +46,11 @@ define Package/aping-upstream/description
 	on Linux and FreeBSD.
 endef
 
-define Package/aping-upstream/conffiles
+define Package/apinger-upstream/conffiles
 /etc/apinger.conf
 endef
 
-define Package/aping-upstream/install
+define Package/apinger-upstream/install
 	$(INSTALL_DIR) $(1)/usr/sbin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/sbin/apinger $(1)/usr/sbin/
 	$(INSTALL_DIR) $(1)/etc
